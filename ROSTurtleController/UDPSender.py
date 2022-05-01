@@ -2,7 +2,8 @@ import socket
 import time
 
 def main ():
-    UDP_IP = "64.85.170.130"
+
+    UDP_IP = "192.168.1.91"  #64.85.170.130
     UDP_PORT = 17484
     MESSAGE = b"Hello, World!"
 
@@ -10,8 +11,9 @@ def main ():
     print("UDP target port: %s" % UDP_PORT)
     print("message: %s" % MESSAGE)
 
-    sock = socket.socket(socket.AF_INET, # Internet
-                         socket.SOCK_DGRAM) # UDP
+    sock = socket.socket(socket.AF_INET,  # Internet
+                         socket.SOCK_DGRAM)  # UDP
+
     for j in range(10):
         time.sleep(1)
         for i in range(10000):
